@@ -7,3 +7,4 @@ export 'src/themes/theme.dart';
 export 'package:uicons/uicons.dart';
 export 'src/alert/alerts.dart';
 export 'src/icons/coo_icons.dart';
+export 'src/images/coo_images.dart';
