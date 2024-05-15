@@ -34,7 +34,7 @@ As liberações de recursos são feitas parcialmente, acompanhadas de comprovant
 ## Tecnologias e Pacotes Utilizados
 
 - [Auto Injector](https://pub.dev/packages/auto_injector): Para injeção de dependências.
-- [RouteFly](https://pub.dev/packages/routefly): Gerenciamento de rotas no app.
+- [Routefly](https://pub.dev/packages/routefly): Gerenciamento de rotas no app.
 - [ValueNotifier](https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html): Utilizado para gerenciar estados dentro do app.
 
 ## Como Contribuir
@@ -179,28 +179,13 @@ class ErrorState<T> implements BasetState {
 - **Exemplo de uso do State Pattern**
 
 ```dart
-abstract interface class ILoginController {
-  ValueNotifier<DefaultState> get state;
-
-  Future<void> login({
-    required String email,
-    required String password,
-  });
-}
-
-class LoginControllerImpl implements ILoginController {
+class LoginControllerImpl extends BaseController {
   final IAuthRepository _repository;
 
   LoginControllerImpl({
-    required IAuthRepository repository,
-  }) : _repository = repository;
+    required this.repository,
+  }) : super(InitialState());
 
-  final _state = ValueNotifier<DefaultState>(InitialState());
-
-  @override
-  ValueNotifier<DefaultState> get state => _state;
-
-  @override
   Future<void> login({
     required String email,
     required String password,
@@ -215,10 +200,13 @@ class LoginControllerImpl implements ILoginController {
 
     final result = await _repository.login(credentials);
 
-    result.fold(
-      (error) => _state.value = ErrorState(exception: error),
-      (success) => _state.value = SuccessState(data: success),
+    final newState = result.fold(
+      (error) => ErrorState(exception: error),
+      (success) => SuccessState(data: success),
     );
+
+    // set state
+    update(newState);
   }
 }
 ```
@@ -350,6 +338,15 @@ obs: esse #10 é uma referencia a issue.
 ## Acesse nossa comunidade no discord
 
 Entrar no servidor do [Discord](https://discord.gg/BMKxRGnEmT) para discutir ideias e colaborar com outros membros da equipe.
+
+## Variáveis de ambiente
+As keys de desenvolvimento estão em `dev.env`
+
+Para usar a key:
+`String.fromEnvironment(CHAVE_DA_VARIAVEL);`
+
+Por questões de segurança, para prod é necessário criar um arquivo local `.env` e adiconar à root de `app/`, seguir o padrão de `dev.env`
+As keys podem ser fornecidas pelos participantes do projeto, entrar em contato com Flutterando caso seja necessário debugar o app prod
 
 ## Licença
 
