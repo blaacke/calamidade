@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class Alerts {
   static void showSucess(BuildContext context, String message) {
     SnackBar snackBar = AlertWidget(
-            color: Theme.of(context).extension<CoopartilharColors>()!.white,
+            color: CoopartilharColors.of(context).white,
             backgroundColor: Theme.of(context).colorScheme.primary,
             imageIcon: CooIcons.cooCheck,
             message: message)
@@ -15,7 +15,7 @@ class Alerts {
 
   static void showFailure(BuildContext context, String message) {
     SnackBar snackBar = AlertWidget(
-            color: Theme.of(context).extension<CoopartilharColors>()!.white,
+            color: CoopartilharColors.of(context).white,
             backgroundColor: Theme.of(context).colorScheme.error,
             icon: UIcons.regularRounded.cross_circle,
             message: message)
