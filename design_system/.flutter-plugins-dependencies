@@ -4,7 +4,7 @@
         "ios": [
             {
                 "name": "path_provider_foundation",
-                "path": "/home/viniciusddrft/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.0/",
+                "path": "C:\\\\Users\\\\jacob\\\\.puro\\\\shared\\\\pub_cache\\\\hosted\\\\pub.dev\\\\path_provider_foundation-2.4.0\\\\",
                 "shared_darwin_source": true,
                 "native_build": true,
                 "dependencies": []
@@ -13,7 +13,7 @@
         "android": [
             {
                 "name": "path_provider_android",
-                "path": "/home/viniciusddrft/.pub-cache/hosted/pub.dev/path_provider_android-2.2.4/",
+                "path": "C:\\\\Users\\\\jacob\\\\.puro\\\\shared\\\\pub_cache\\\\hosted\\\\pub.dev\\\\path_provider_android-2.2.4\\\\",
                 "native_build": true,
                 "dependencies": []
             }
@@ -21,7 +21,7 @@
         "macos": [
             {
                 "name": "path_provider_foundation",
-                "path": "/home/viniciusddrft/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.0/",
+                "path": "C:\\\\Users\\\\jacob\\\\.puro\\\\shared\\\\pub_cache\\\\hosted\\\\pub.dev\\\\path_provider_foundation-2.4.0\\\\",
                 "shared_darwin_source": true,
                 "native_build": true,
                 "dependencies": []
@@ -30,7 +30,7 @@
         "linux": [
             {
                 "name": "path_provider_linux",
-                "path": "/home/viniciusddrft/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/",
+                "path": "C:\\\\Users\\\\jacob\\\\.puro\\\\shared\\\\pub_cache\\\\hosted\\\\pub.dev\\\\path_provider_linux-2.2.1\\\\",
                 "native_build": false,
                 "dependencies": []
             }
@@ -38,7 +38,7 @@
         "windows": [
             {
                 "name": "path_provider_windows",
-                "path": "/home/viniciusddrft/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1/",
+                "path": "C:\\\\Users\\\\jacob\\\\.puro\\\\shared\\\\pub_cache\\\\hosted\\\\pub.dev\\\\path_provider_windows-2.2.1\\\\",
                 "native_build": false,
                 "dependencies": []
             }
@@ -72,6 +72,6 @@
             "dependencies": []
         }
     ],
-    "date_created": "2024-05-14 17:05:59.724206",
-    "version": "3.19.6"
+    "date_created": "2024-05-15 09:23:54.170351",
+    "version": "3.22.0"
 }
