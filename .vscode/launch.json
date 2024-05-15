@@ -5,81 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "app",
-            "cwd": "app",
+            "name": "Dev app",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "app/lib/main_dev.dart",
+            "toolArgs": [
+                "--dart-define-from-file",
+                "dev.env",
+            ]
+        },
+        {
+            "name": "Prod app",
+            "request": "launch",
+            "type": "dart",
+            "program": "app/lib/main_prod.dart",
+            "toolArgs": [
+                "--dart-define-from-file",
+                ".env",
+            ]
         },
         {
             "name": "app (profile mode)",
-            "cwd": "app",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
             "name": "app (release mode)",
-            "cwd": "app",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "core_module",
-            "cwd": "core_module",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "core_module (profile mode)",
-            "cwd": "core_module",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "core_module (release mode)",
-            "cwd": "core_module",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "dashboard",
-            "cwd": "dashboard",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "dashboard (profile mode)",
-            "cwd": "dashboard",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "dashboard (release mode)",
-            "cwd": "dashboard",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "design_system",
-            "cwd": "design_system",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "design_system (profile mode)",
-            "cwd": "design_system",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "design_system (release mode)",
-            "cwd": "design_system",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
